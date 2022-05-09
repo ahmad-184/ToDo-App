@@ -1,0 +1,358 @@
+*,*::after,*::before {
+    box-sizing: border-box;
+}
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* background-color: rgb(9, 14, 56); */
+    background-color: rgba(0, 0, 0, 0.95);
+    user-select: none;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    display: none;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #e1e1e1;
+    
+    
+}
+::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.95);
+}
+
+.container {
+    padding: 0 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+
+}
+.title {
+    margin-bottom: .9rem;
+    font-size: 30px;
+    color: rgb(240, 240, 240);
+}
+.title > h1 {
+    margin-bottom: 0;
+    margin-top: 4rem;
+    /* font-family: 'Koulen', cursive; */
+    font-family: 'Radio Canada', sans-serif;
+}
+.InputBox {
+    width: 100%;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding: 0rem 1rem;
+}
+.InputBox > input {
+    width: 100%;
+    padding: 7px 5px;
+    font-size: 16px;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    font-family: 'Radio Canada','Vazirmatn', sans-serif;
+    font-weight: 600;
+    letter-spacing: .3px;
+    border: 0;
+    border-bottom-color: currentcolor;
+    border-bottom-style: none;
+    border-bottom-width: 0px;
+    background: transparent;
+    color: #fff;
+    border-bottom: 1px solid #3339;
+    outline: 0;
+}
+.InputBox > input::placeholder {
+    font-size: 15px;
+}
+.InputBox > input:focus {
+    border-color: #bfbfbf;
+}
+
+.boxContainer {
+    padding: .5rem 1rem;
+    /* background-color: aliceblue; */
+    width: 100%;
+    overflow: auto;
+}
+
+.BtnContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.BtnContainer > button {
+    width: 3rem;
+    font-size: 15px;
+    font-family: sans-serif;
+    letter-spacing: 1.5px;
+    padding: 6px 0px 3px 0px;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    z-index: 1;
+    transition: opacity .1s;
+    border: 0;
+    font-weight: bold;
+    border-radius: 4px;
+    height: fit-content;
+    position: relative;
+    bottom: 10px;
+}
+.BtnContainer > button:hover {
+    opacity: .85;
+}
+
+.singleBox {
+    background-color: #262626;
+    padding: 40px 15px 12px 15px;
+    position: relative;
+    color: #fffefe;
+    letter-spacing: .5px;
+    text-transform: capitalize;
+    font-size: 12px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    transition: all .5s;
+}
+.closeBtn,.returnBtn {
+    position: absolute;
+    top: 8px;
+    right: 6px;
+    color: #f9f9f9;
+    margin: 0;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+    cursor: pointer;
+    font-size: 22px;
+    width: 29px;
+    height: 30px;
+}
+.closeBtn:hover,.returnBtn:hover {
+    opacity: .7;
+}
+.closeBtn > span,.returnBtn > img {
+    padding: 5px;
+}
+
+.returnBtn {
+    right: 40px;
+}
+
+.text {
+    width: 100%;
+    color: white;
+    letter-spacing: .5px;
+    font-size: 15px;
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    font-family: 'Radio Canada','Vazirmatn', sans-serif;
+    line-height: 1.4;
+    word-break: break-word;
+}
+.box > span {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 12px;
+    color: rgb(115, 115, 115);
+}
+.DataClock {
+    font-family: 'Radio Canada', sans-serif;
+}
+
+.alert {
+    position: absolute;
+    color: white;
+    background-color: rgba(240, 41, 41, 0.64);
+    font-size: 14px;
+    letter-spacing: .5px;
+    padding: 9px 9px;
+    border-radius: 15px;
+    font-family: 'Radio Canada', sans-serif;
+    font-weight: 500;
+    margin: 0;
+    bottom: -4rem;
+    left: 50%;
+    display: none;
+    z-index: 1;
+    transform: translate(-50%,-50%);
+    width: 244px;
+    text-transform: capitalize;
+}
+
+.puphops {
+    background-color: rgb(41, 40, 51);
+    width: 100%;
+    padding: 1.5rem;
+    position: fixed;
+    bottom: 0;
+    color: white;
+    font-size: 16px;
+    font-family: 'Roboto Flex', sans-serif;
+    text-transform: capitalize;
+    display: block;
+    transform: translateY(100%);
+    transition: all .6s;
+    z-index: 2;
+}
+
+.puphops p {
+    margin-top: 0;
+    line-height: 1.4;
+}
+
+.puphops button {
+    border: 0;
+    background-color: transparent;
+    border: 2px solid rgb(194, 194, 194);
+    border-radius: 5px;
+    color: white;
+    padding: 4px 7px;
+    font-size: 11.6px;
+    transition: all .4s;
+    cursor: pointer;
+    letter-spacing: 0.7px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+.puphops button:last-of-type {
+    margin-left: 5px;
+}
+.puphops button:hover {
+    background-color: rgb(56, 56, 56);
+}
+
+.historysection {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 0%;
+    /* background-color: #161616e8; */
+    /* background-color: #161616f2; */
+    background-color: #161616;
+    transition: all 250ms;
+    overflow: auto;
+    z-index: 2;
+}
+
+.titlehistory {
+    font-family: 'Radio Canada', sans-serif;
+    margin: 1rem 0 1.5rem 0;
+    letter-spacing: .5px;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+}
+.titlehistory > h5 {
+    margin: 0;
+}
+
+.clearDbAll {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.historyContainer {
+    padding: 1rem 0;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+} 
+
+.historyContainer > .singleBox {
+    width: 95%;
+    margin-bottom: 5px;
+    /* background-color: #682e82cc; */
+    /* background-color: #144a60cc; */
+    background-color: #ffffffed;
+    border-radius: 10px 10px 10px 0;
+}
+.historyContainer > .singleBox > .box > span {
+    color: rgb(117, 117, 117);
+    font-size: 11.5px;
+}
+.historyContainer > .singleBox > .box > .text {
+    font-size: 15px;
+    color: black;
+    font-weight: bolder;
+    font-weight: 400;
+}
+.historyContainer > .singleBox > .box > .closeBtn {
+    color: #fff;
+}
+
+.HistoryBtn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 100;
+}
+.HistoryBtn > button {
+    background-color: #ae48a400;
+    border: 0px;
+    cursor: pointer;
+    outline: 0;
+}
+.HistoryBtn > button > img {
+    background-color: rgba(0, 0, 0, 0.81);
+    padding: 5px 5px 5px 3px;
+    border-radius: 3px;
+}
+
+.clearList {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+}
+.clearList > button,.clearDbAll > button {
+    padding: 4px 6px;
+    background-color: transparent;
+    border: 0px;
+    cursor: pointer;
+    transition: background .3s;
+}
+.clearList > button:hover,.clearDbAll > button:hover  {
+    background-color:#242424 ;
+}
+.clearList > button:active,.clearDbAll > button:active {
+    background-color: #4e4e4e;
+}
+
+.active {
+    opacity: .4;
+    /* background-color: #1f4566; */
+    /* background-color: #000 !important; */
+}
+
+.height {
+    height: 100%;
+}
+
+.scrollhidden {
+    overflow: hidden;
+}
+
+@media screen and (min-width: 800px) {
+    .boxContainer {
+        width: 80%;
+    }
+    .InputBox > input {
+        width: 80%;
+    }
+}
